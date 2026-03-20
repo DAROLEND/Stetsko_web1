@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>СкладТех | Облік матеріалів</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+    <title>ВиробПлан | Планування виробництва</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,118 +12,120 @@
     <header class="header">
         <div class="container header-content">
             <div class="logo">
-                <img src="logo.png" alt="Логотип СкладТех">
+                <span class="logo-mark">В</span>
+                <span class="logo-text">ВиробПлан</span>
             </div>
             <nav class="nav">
                 <a href="#" class="active">Головна</a>
-                <a href="#">Матеріали</a>
+                <a href="#">Завдання</a>
+                <a href="#">Виробництво</a>
                 <a href="#">Звіти</a>
-                <a href="#">Склад</a>
                 <a href="#">Контакти</a>
             </nav>
-            <div class="login">
-                <a href="#">Увійти</a>
+            <div class="header-right">
+                <a href="#" class="btn-login">Увійти</a>
             </div>
         </div>
     </header>
 
     <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-left">
-                <div class="hero-tag">Меблева фабрика · Склад матеріалів</div>
-                <h1>Облік матеріалів <br><span>під контролем</span></h1>
-                <p>Контролюйте залишки, надходження та витрати матеріалів меблевої фабрики в одній системі.</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary">Додати матеріал</button>
-                    <button class="btn-outline">Переглянути склад</button>
-                </div>
+        <div class="container">
+            <div class="hero-label">Меблева фабрика · Система планування</div>
+            <h1>Плануйте виробництво.<br><span>Контролюйте кожен етап.</span></h1>
+            <p class="hero-desc">Розподіляйте завдання між цехами, відстежуйте терміни та керуйте поточними роботами в єдиній системі.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Створити завдання</button>
+                <button class="btn-outline">Переглянути план</button>
             </div>
-            <div class="hero-right">
-                <div class="hero-stat">
-                    <strong>847</strong>
-                    <span>Позицій на складі</span>
-                </div>
-                <div class="hero-stat">
-                    <strong>12</strong>
-                    <span>Категорій матеріалів</span>
-                </div>
-                <div class="hero-stat">
-                    <strong>34</strong>
-                    <span>Критичний залишок</span>
-                </div>
+            <div class="hero-pills">
+                <span class="pill green">&#10003; 12 виконано сьогодні</span>
+                <span class="pill yellow">&#9679; 5 у роботі</span>
+                <span class="pill red">&#9888; 2 прострочено</span>
             </div>
         </div>
     </section>
 
     <section class="popular">
         <div class="container">
-            <h2>Матеріали на складі</h2>
-            <p class="section-sub">Актуальний стан основних позицій</p>
+            <div class="section-head">
+                <h2>Поточні виробничі завдання</h2>
+                <p>Актуальний стан замовлень по цехах</p>
+            </div>
             <div class="products-grid">
 
                 <article class="product-card">
-                    <img src="board.png" alt="Дошка соснова">
-                    <div class="card-info">
-                        <h3>Дошка соснова</h3>
-                        <p>Арт.: D-001 &nbsp;·&nbsp; Залишок: 340 шт. &nbsp;·&nbsp; Стан: В наявності</p>
+                    <div class="badge-urgent">Терміново!</div>
+                    <div class="card-top indigo">
+                        <span class="card-status">Виконується</span>
+                        <span class="card-num">KM-041</span>
                     </div>
+                    <img src="cabinet.png" alt="Корпусні меблі">
+                    <h3>Корпусні меблі</h3>
+                    <p>Цех: Розкрій + Складання<br>Термін: 28.03.2026</p>
                     <button class="btn-card">Детальніше</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="badge-low">Мало!</div>
-                    <img src="plywood.png" alt="Фанера березова">
-                    <div class="card-info">
-                        <h3>Фанера березова</h3>
-                        <p>Арт.: F-002 &nbsp;·&nbsp; Залишок: 85 аркушів &nbsp;·&nbsp; Стан: Мало</p>
+                    <div class="card-top amber">
+                        <span class="card-status">Очікує</span>
+                        <span class="card-num">MM-042</span>
                     </div>
+                    <img src="soft.png" alt="М'які меблі">
+                    <h3>М'які меблі</h3>
+                    <p>Цех: Оббивний<br>Термін: 01.04.2026</p>
                     <button class="btn-card">Детальніше</button>
                 </article>
 
                 <article class="product-card">
-                    <img src="varnish.png" alt="Лак меблевий">
-                    <div class="card-info">
-                        <h3>Лак меблевий</h3>
-                        <p>Арт.: L-003 &nbsp;·&nbsp; Залишок: 120 л. &nbsp;·&nbsp; Стан: В наявності</p>
+                    <div class="card-top indigo">
+                        <span class="card-status">Виконується</span>
+                        <span class="card-num">KU-043</span>
                     </div>
+                    <img src="kitchen.png" alt="Кухні">
+                    <h3>Кухонні гарнітури</h3>
+                    <p>Цех: Розкрій + Фасади<br>Термін: 05.04.2026</p>
                     <button class="btn-card">Детальніше</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="badge-empty">Немає!</div>
-                    <img src="screws.png" alt="Шурупи 4x40">
-                    <div class="card-info">
-                        <h3>Шурупи 4x40</h3>
-                        <p>Арт.: S-004 &nbsp;·&nbsp; Залишок: 0 шт. &nbsp;·&nbsp; Стан: Відсутній</p>
+                    <div class="badge-new">Нове!</div>
+                    <div class="card-top gray">
+                        <span class="card-status">Заплановано</span>
+                        <span class="card-num">LK-044</span>
                     </div>
+                    <img src="bed.png" alt="Ліжка">
+                    <h3>Ліжка та каркаси</h3>
+                    <p>Цех: Складання<br>Термін: 10.04.2026</p>
                     <button class="btn-card">Детальніше</button>
                 </article>
 
             </div>
-        <div class="slider-controls">
-            <div class="slider-arrow prev-arrow">&#9664;</div>
-            <div class="slider-arrow next-arrow">&#9654;</div>
-            <div class="clear-floats"></div>
-        </div>
+            <div class="slider-controls">
+                <div class="slider-arrow prev-arrow">&#9664;</div>
+                <div class="slider-arrow next-arrow">&#9654;</div>
+                <div class="clear-floats"></div>
+            </div>
         </div>
     </section>
 
     <section class="benefits">
         <div class="container">
-            <h2>Переваги системи</h2>
-            <p class="section-sub">Все необхідне для управління складом фабрики</p>
+            <div class="section-head">
+                <h2>Можливості системи</h2>
+                <p>Інструменти для ефективного управління виробництвом</p>
+            </div>
             <div class="benefits-grid">
                 <div class="benefit-item">
-                    <img src="icon-registry.png" alt="Реєстр">
-                    <span>Реєстр матеріалів</span>
+                    <img src="icon-plan.png" alt="Планування">
+                    <span>Планування завдань</span>
                 </div>
                 <div class="benefit-item">
-                    <img src="icon-stock.png" alt="Залишки">
-                    <span>Контроль залишків</span>
+                    <img src="icon-track.png" alt="Облік">
+                    <span>Облік робіт</span>
                 </div>
                 <div class="benefit-item">
-                    <img src="icon-order.png" alt="Замовлення">
-                    <span>Автозамовлення</span>
+                    <img src="icon-time.png" alt="Терміни">
+                    <span>Контроль термінів</span>
                 </div>
                 <div class="benefit-item">
                     <img src="icon-report.png" alt="Звітність">
@@ -138,14 +140,13 @@
             <div class="work-hours">
                 <img src="time-icon.png" alt="Годинник" class="footer-icon">
                 <div class="hours-text">
-                    <h4>Години роботи складу</h4>
-                    <p>Пн-Пт: 7:00 – 17:00</p>
-                    <p>Сб: 8:00 – 13:00</p>
+                    <h4>Графік роботи фабрики</h4>
+                    <p>Пн-Пт: 7:00 – 18:00</p>
+                    <p>Сб: 8:00 – 14:00</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 СкладТех.</p>
-                <p>Усі права захищені</p>
+                <p>&copy; 2026 ВиробПлан.<br>Усі права захищені</p>
             </div>
         </div>
     </footer>
