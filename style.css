@@ -79,6 +79,24 @@ body {
     font-size: 15px;
     font-weight: 500;
     transition: color 0.2s;
+    position: relative;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--indigo);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+    transform: scaleX(1);
 }
 
 .nav a:hover,
@@ -149,6 +167,12 @@ body {
     margin-bottom: 50px;
 }
 
+@keyframes pulse-amber {
+    0%   { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+    70%  { box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
 .btn-primary {
     background-color: var(--amber);
     color: var(--dark);
@@ -159,6 +183,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s;
+    animation: pulse-amber 2s infinite;
 }
 
 .btn-primary:hover {
@@ -450,6 +475,7 @@ body {
     border-radius: 14px;
     background-color: rgba(255,255,255,0.03);
     transition: background-color 0.3s, border-color 0.3s;
+    perspective: 1000px;
 }
 
 .benefit-item:hover {
@@ -461,11 +487,11 @@ body {
     height: 80px;
     display: block;
     margin: 0 auto 18px auto;
-    transition: transform 0.3s;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .benefit-item:hover img {
-    transform: scale(1.1);
+    transform: rotateY(360deg) scale(1.15);
 }
 
 .benefit-item span {
